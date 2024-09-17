@@ -262,8 +262,53 @@ color: #0bfc8b;
 .sobremi button:hover .overlay{
   width: 100%;
 }
+ /* Responsive para celular */
+@media (max-width: 768px) {
+  .sobremi {
+    padding: 20px;
+  }
+  .sobremi .contenido-seccion {
+    max-width: 100%;
+  }
+  .sobremi h2 {
+    font-size: 36px;
+  }
+  .sobremi .fila {
+    flex-direction: column;
+  }
+  .sobremi .fila .col {
+    width: 100%;
+  }
+  .sobremi .fila .col h3 {
+    font-size: 24px;
+  }
+  .sobremi .fila .col ul li {
+    margin: 10px 0;
+  }
+  .sobremi .fila .col .contenedor-intereses {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sobremi .fila .col .contenedor-intereses .interes {
+    margin: 10px;
+  }
+}
 
-
+@media (max-width: 480px) {
+  .sobremi h2 {
+    font-size: 28px;
+  }
+  .sobremi .fila .col h3 {
+    font-size: 20px;
+  }
+  .sobremi .fila .col ul li {
+    margin: 5px 0;
+  }
+  .sobremi .fila .col .contenedor-intereses .interes {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 /* Experiencia */
 
@@ -367,6 +412,62 @@ color: #0bfc8b;
   font-size: 60px;
   margin: 10px;
 }
+/* Responsive para celular */
+@media (max-width: 768px) {
+  .proyectos-recientes {
+    padding: 20px;
+  }
+  .proyectos-contenedor {
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+  .proyecto {
+    margin-bottom: 20px;
+  }
+  .proyecto img {
+    border-radius: 5px;
+  }
+  .overlay {
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+  }
+  .overlay p {
+    font-size: 18px;
+  }
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-recientes {
+    padding: 10px;
+  }
+  .proyectos-contenedor {
+    padding-top: 15px;
+    margin-bottom: 10px;
+  }
+  .proyecto {
+    margin-bottom: 10px;
+  }
+  .proyecto img {
+    border-radius: 3px;
+  }
+  .overlay {
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+  }
+  .overlay p {
+    font-size: 14px;
+  }
+  .overlay i {
+    font-size: 30px;
+  }
+}
+
+
 
 /* Contacto */
 
@@ -443,7 +544,7 @@ justify-content: space-around;
 .subt{
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #f1f4f5;
-  opacity: 0.7;
+  
 }
 
 .social-icons a {
