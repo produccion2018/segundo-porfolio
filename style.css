@@ -520,66 +520,97 @@ color: #0bfc8b;
 .contacto button:hover i {
   color: black;
 }
-
-/* Pie de pagina (footer) */
-.footer{
-  background-color: #080808;
-}
-.iconos-superior{
+ /* footer  */
+ footer {
+  background-color: #333;
+  color: white;
   padding: 20px;
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-justify-content: space-around;
-}
-.footer-title{
-  font-size: 20px;
-  font-family: 'Work Sans'; 
-  color: #f1f4f5;
-  opacity: 0,7;
-}
-.footer-title:hover{
-  color: #07fc89;
-}
-.subt{
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #f1f4f5;
-  
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 24px;
-  transition: color 0.2s ease;
-  margin-right: 10px;
-  
-}
-
-.facebook:hover {
-  color: #98823b;
-}
-
-.twitter:hover {
-  color: #1da1f2;
-}
-
-.instagram:hover {
-  color: #e1306c;
-}
-
-.linkedin:hover {
-  color: #0077b5;
-}
-
-.fa-solid{
-  color: #ffffff;
-}
-
-.copyright{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  opacity: 0.7;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Max ancho para el footer */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.footer-links div {
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #1e90ff; /* Cambia a un color azul al pasar el mouse */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 15px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #1e90ff; /* Cambia a un color azul al pasar el mouse */
+}
+
+.map-container {
+  width: 100%;
+  max-width: 600px; /* Max ancho para pantallas grandes */
+  height: 300px; /* Altura del mapa */
+  margin: 20px 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.footer-info {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-links div {
+      margin: 5px 0; /* Margen en pantallas pequeñas */
+  }
+
+  .social-media a {
+      font-size: 20px; /* Reduce el tamaño de los iconos en pantallas pequeñas */
+  }
+
+  .footer-info {
+      font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
 }
 
 /* Adaptable (Responsivo) */
