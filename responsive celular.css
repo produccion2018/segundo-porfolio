@@ -1,0 +1,35 @@
+/* CSS para la navegación en móvil */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco para la barra de navegación */
+    padding: 1rem;
+  }
+  
+  .navbar-brand img.logo {
+    max-width: 100px; /* Ajusta el tamaño del logo */
+  }
+  
+  /* Centrar el logo y la navegación en dispositivos móviles */
+  .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.1); /* Opcional: para mejorar el diseño */
+  }
+  
+  .navbar-toggler-icon {
+    color: #000000; /* Cambiar color del ícono de menú si es necesario */
+  }
+  
+  /* Centrar y estilizar los enlaces de la navegación */
+  .navbar-nav .nav-link {
+    color: #000000; /* Color negro para los enlaces */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand {
+      text-align: center;
+      width: 100%;
+    }
+    .navbar-nav {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
