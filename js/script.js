@@ -30,3 +30,5 @@ formulario.addEventListener('submit', (e) => {
         console.log('Por favor, complete todos los campos');
     }
 });
+
+
