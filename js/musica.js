@@ -37,5 +37,3 @@ videos.forEach(video => {
     videoList.appendChild(videoItem);
 });
 
-
-
