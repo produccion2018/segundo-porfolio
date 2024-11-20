@@ -1,70 +1,86 @@
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* Color de fondo más suave */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fa;
     color: #333;
     margin: 0;
     padding: 0;
   }
   
+  /* Header mejorado */
   header {
-    background-color: #3498db; /* Azul más relajante */
+    background-color: #3498db; /* Mantiene el tono base de azul */
     color: white;
-    padding: 25px 20px;
+    padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el header */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más prominente para mayor profundidad */
+    border-bottom: 4px solid #2980b9; /* Borde inferior más grueso para mayor presencia */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados superiores */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
+  /* Título principal */
   h1 {
     margin: 0;
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 3.5rem; /* Aumentamos el tamaño para dar mayor énfasis */
+    font-weight: 700;
+    letter-spacing: 2px; /* Mayor espacio entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15); /* Agregar sombra al texto */
   }
   
+  /* Menú de navegación */
   nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
   
   nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-right: 30px; /* Espacio entre los elementos del menú */
   }
   
   nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid transparent; /* Borde para efectos de hover */
+    transition: all 0.3s ease;
   }
   
   nav ul li a:hover {
-    background-color: #2980b9; /* Color de hover más suave */
-    transform: scale(1.1); /* Efecto de zoom */
+    background-color: #2980b9;
+    color: white;
+    border-color: #2980b9;
+    transform: translateY(-5px); /* Efecto de elevación en hover */
   }
   
   /* Secciones */
   section {
-    padding: 30px;
-    margin: 25px 0;
+    padding: 35px;
+    margin: 30px 0;
     background-color: #ffffff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más fuerte para las secciones */
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
   }
   
   section:hover {
-    transform: translateY(-5px); /* Elevación al pasar el mouse */
+    transform: translateY(-5px);
   }
   
   h2 {
     color: #3498db;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
     font-weight: 600;
   }
@@ -80,17 +96,73 @@ body {
     line-height: 1.6;
   }
   
+  /* Estilo para enlaces internos o artículos */
+  a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  
   /* Pie de página */
   footer {
     text-align: center;
     background-color: #3498db;
     color: white;
-    padding: 15px 20px;
-    position: fixed;
+    padding: 20px 0;
+    position: relative;
     width: 100%;
-    bottom: 0;
     font-size: 1rem;
     font-weight: 500;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en el pie */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    border-top: 2px solid #2980b9; /* Línea más delgada y sutil */
+  }
+  
+  footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  footer .social-icons {
+    margin-top: 10px;
+  }
+  
+  footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  footer .social-icons a:hover {
+    color: #2980b9;
+    transform: scale(1.2); /* Efecto de aumento para los íconos */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    header {
+      padding: 30px 15px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
   
