@@ -1,45 +1,36 @@
-/* styles.css */
+/* Ensure body uses full height and proper font */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  color: #333;
 }
 
+/* Header style */
 header {
-  background-color: #0077b6; /* Azul fuerte */
+  background-color: #333;
   color: white;
-  padding: 1.5rem;
   text-align: center;
+  padding: 20px 0;
 }
 
-header h1 {
+/* Title Style */
+h1 {
   margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5em;
 }
 
-main {
+/* Mural Section Style */
+.mural {
+  margin: 20px 0;
   padding: 20px;
 }
 
-.mural {
-  margin-bottom: 40px;
-}
-
-.mural h2 {
-  font-size: 2rem;
-  color: #0077b6;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+/* Grid Style for Image Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   justify-items: center;
 }
 
@@ -48,38 +39,35 @@ figure {
   text-align: center;
 }
 
-figure img {
+img {
   width: 100%;
   height: auto;
+  max-width: 300px; /* Make sure the images are uniform */
+  object-fit: cover; /* This ensures images fit into their containers */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
-figure img:hover {
-  transform: scale(1.1); /* Zoom al pasar el mouse */
-  opacity: 1; /* Aumenta la opacidad al pasar el mouse */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+/* Hover effect for images */
+img:hover {
+  transform: scale(1.05);
 }
 
 figcaption {
+  font-size: 1em;
   margin-top: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
   color: #333;
 }
 
+/* Footer Style */
 footer {
-  text-align: center;
-  padding: 15px;
   background-color: #333;
   color: white;
-  margin-top: 30px;
+  padding: 10px 0;
+  text-align: center;
 }
 
 footer p {
   margin: 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  font-size: 1em;
 }
