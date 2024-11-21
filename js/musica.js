@@ -1,28 +1,40 @@
-// Variables
+// Referencias a los elementos DOM
 const playlist = document.getElementById("playlist");
 const videoPlayer = document.getElementById("video-player");
 
-// Reproducir canción seleccionada
-playlist.addEventListener("click", (e) => {
-  if (e.target && e.target.classList.contains("playlist-item")) {
-    const videoUrl = e.target.getAttribute("data-video");
+// Escuchar clics en la playlist
+playlist.addEventListener("click", (event) => {
+  const clickedElement = event.target;
 
-    // Cambiar video
-    cambiarVideo(videoUrl);
+  // Verificar que se ha hecho clic en un elemento válido de la playlist
+  if (clickedElement && clickedElement.classList.contains("playlist-item")) {
+    const videoUrl = clickedElement.dataset.video; // Acceso más directo al atributo 'data-video'
 
-    // Resaltar canción activa
-    actualizarCancionActiva(e.target);
+    if (videoUrl) {
+      cambiarVideo(videoUrl); // Cambiar el video
+      actualizarCancionActiva(clickedElement); // Resaltar la canción activa
+    }
   }
 });
 
-// Función para cambiar el video
+/**
+ * Cambia el video en el reproductor.
+ * @param {string} url - URL del video a reproducir.
+ */
 function cambiarVideo(url) {
   videoPlayer.src = url;
 }
 
-// Función para resaltar la canción activa
+/**
+ * Resalta la canción activa en la lista de reproducción.
+ * @param {HTMLElement} elementoSeleccionado - Elemento de la playlist seleccionado.
+ */
 function actualizarCancionActiva(elementoSeleccionado) {
-  const items = playlist.querySelectorAll(".playlist-item");
-  items.forEach((item) => item.classList.remove("active"));
+  // Remover clase 'active' de todos los elementos
+  playlist.querySelectorAll(".playlist-item").forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // Agregar clase 'active' al elemento seleccionado
   elementoSeleccionado.classList.add("active");
 }
