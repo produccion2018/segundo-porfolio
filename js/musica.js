@@ -1,39 +1,28 @@
-// Lista de videos
-const videos = [
-    {
-        title: "Mi Primera Canción",
-        url: "https://www.youtube.com/embed/VIDEO_ID1"
-    },
-    {
-        title: "Melodía del Alma",
-        url: "https://www.youtube.com/embed/VIDEO_ID2"
-    },
-    {
-        title: "Ritmos del Futuro",
-        url: "https://www.youtube.com/embed/VIDEO_ID3"
-    }
-];
+// Variables
+const playlist = document.getElementById("playlist");
+const videoPlayer = document.getElementById("video-player");
 
-// Selecciona el contenedor de videos
-const videoList = document.getElementById('video-list');
+// Reproducir canción seleccionada
+playlist.addEventListener("click", (e) => {
+  if (e.target && e.target.classList.contains("playlist-item")) {
+    const videoUrl = e.target.getAttribute("data-video");
 
-// Renderiza los videos
-videos.forEach(video => {
-    const videoItem = document.createElement('div');
-    videoItem.className = 'video-item';
+    // Cambiar video
+    cambiarVideo(videoUrl);
 
-    const iframe = document.createElement('iframe');
-    iframe.src = video.url;
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe.allowFullscreen = true;
-
-    const title = document.createElement('div');
-    title.className = 'video-title';
-    title.textContent = video.title;
-
-    videoItem.appendChild(iframe);
-    videoItem.appendChild(title);
-
-    videoList.appendChild(videoItem);
+    // Resaltar canción activa
+    actualizarCancionActiva(e.target);
+  }
 });
 
+// Función para cambiar el video
+function cambiarVideo(url) {
+  videoPlayer.src = url;
+}
+
+// Función para resaltar la canción activa
+function actualizarCancionActiva(elementoSeleccionado) {
+  const items = playlist.querySelectorAll(".playlist-item");
+  items.forEach((item) => item.classList.remove("active"));
+  elementoSeleccionado.classList.add("active");
+}
