@@ -1,4 +1,4 @@
-// Referencias a los elementos DOM
+
 const playlist = document.getElementById("playlist");
 const videoPlayer = document.getElementById("video-player");
 
